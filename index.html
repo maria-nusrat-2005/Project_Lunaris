@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunaris</title>
+    <link rel="shortcut icon" href="./images/diamond.png" type="image/x-icon" />
+
+    <!-- daisy ui and Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#f5f7fb] text-gray-800">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 h-14 backdrop-blur-xl bg-transparent border-b border-white/20 shadow-[0_1px_0_rgba(0,0,0,0.03)]"
+    >
+      <div class="flex items-center justify-between h-full px-8">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="./images/diamond.png" alt="Lunaris" class="w-6 h-6" />
+          <span class="text-xl font-semibold tracking-tight text-base-content">
+            Lunaris
+          </span>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center gap-5">
+          <!-- Theme Toggle -->
+          <label class="swap swap-rotate">
+            <!-- hidden checkbox -->
+            <input
+              type="checkbox"
+              onchange="document.documentElement.setAttribute('data-theme', this.checked ? 'dark' : 'light')"
+            />
+
+            <!-- sun icon -->
+            <svg
+              class="swap-on w-5 h-5 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5.64 17l-.71.71a1 1 0 001.41 1.41l.71-.71a1 1 0 10-1.41-1.41zM12 5a1 1 0 011-1h0a1 1 0 010 2h0a1 1 0 01-1-1zm6.36 12l.71.71a1 1 0 01-1.41 1.41l-.71-.71a1 1 0 011.41-1.41zM12 19a1 1 0 011 1h0a1 1 0 01-2 0h0a1 1 0 011-1zm7-7a1 1 0 01-1 1h0a1 1 0 010-2h0a1 1 0 011 1zM5 12a1 1 0 01-1 1h0a1 1 0 010-2h0a1 1 0 011 1zm12.36-6.36a1 1 0 01-1.41 0l-.71-.71a1 1 0 011.41-1.41l.71.71a1 1 0 010 1.41zM6.34 6.34a1 1 0 010-1.41l-.71-.71A1 1 0 016.34 2.8l.71.71a1 1 0 010 1.41zM12 8a4 4 0 100 8 4 4 0 000-8z"
+              />
+            </svg>
+
+            <!-- moon icon -->
+            <svg
+              class="swap-off w-5 h-5 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.64 13a1 1 0 00-1.05-.14 8 8 0 01-10.45-10.45 1 1 0 00-1.19-1.19A10 10 0 1022.83 14a1 1 0 00-1.19-1z"
+              />
+            </svg>
+          </label>
+
+          <div class="w-8 h-8 rounded-full bg-gray-300"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside
+      class="fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-white/70 backdrop-blur-md border-r border-gray-200 px-4 py-6"
+    >
+      <nav class="space-y-2">
+        <!-- Nav Item -->
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 text-blue-600 font-medium"
+        >
+          📊 Dashboard
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium"
+        >
+          🧾 Budget
+        </a>
+
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-100 transition"
+        >
+          💸 Transactions
+        </a>
+
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-100 transition"
+        >
+          🎯 Goals
+        </a>
+
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-100 transition"
+        >
+          📈 Reports
+        </a>
+
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-100 transition"
+        >
+          ⚙️ Settings
+        </a>
+      </nav>
+
+      <!-- Bottom Section -->
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="ml-64 mt-16 p-8">
+      <h1 class="text-2xl font-semibold mb-2">Dashboard</h1>
+      <p class="text-gray-500">Welcome back. Here’s your financial overview.</p>
+
+      <!-- Content Placeholder -->
+      <div class="mt-8 h-64 rounded-2xl bg-white shadow-sm"></div>
+    </main>
+  </body>
+  <!-- footer -->
+  <footer
+    class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
+  >
+    <p>Copyright © 2025 - All right reserved by 💎Lunaris</p>
+  </footer>
+</html>
